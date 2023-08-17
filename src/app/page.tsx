@@ -46,13 +46,8 @@ export default function Home() {
           states={states}
         />
         <DatePicker />
-        <PhoneAndAddress />
         <NamesInput />
-        {/* <StateSelector
-          states={states}
-          onUpdateCities={updateCities}
-        />
-        <CitySelector cities={cities} /> */}
+        <PhoneAndAddress />
         <AddressInformation
           states={states}
           onUpdateCities={updateCities}

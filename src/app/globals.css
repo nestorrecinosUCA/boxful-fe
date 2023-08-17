@@ -18,7 +18,8 @@
 
 body {
   background-color: white;
-  color: rgb(var(--foreground-rgb));
+  color: #7682A0;
+  font-size: bolder;
   /* background: linear-gradient(
       to bottom,
       transparent,
