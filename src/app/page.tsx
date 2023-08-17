@@ -5,6 +5,7 @@ import CitySelector from '@/app/form/city';
 import { useState, useEffect } from 'react';
 import { State } from '@/app/types';
 import { City } from '@/app/types/city';
+import CollectingAddressSelector from '@/app/form/collecting-address';
 
 
 export default function Home() {
@@ -33,6 +34,9 @@ export default function Home() {
   }
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <CollectingAddressSelector
+        states={states}
+      />
       <StateSelector
         states={states}
         onUpdateCities={updateCities}
