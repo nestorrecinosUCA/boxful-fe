@@ -9,8 +9,12 @@ export default function CollectingAddressSelector({states, onUpdateOrder}) {
       <label htmlFor="collecting-point">📍 Dirección de recolección</label>
       <select 
         id={`collecting-point`}
-        defaultValue={'Default'}
-        onChange={(event) => {onUpdateOrder({collectingAddress: event.target.value})}}
+        defaultValue='Default'
+        onChange={(event) => {
+          onUpdateOrder({
+            collectingAddress: event.target.value
+          })
+        }}
       >
         <option value={'Default'}>Seleccionar punto de recolección</option>
         {collectionPoints.map((point: CollectingAddressType) => (

@@ -1,7 +1,7 @@
 import { PackageType } from './package';
 
 export type OrderType = {
-  collectingAddres: string;
+  collectingAddress: string;
   date: Date;
   names: string;
   lastnames: string;

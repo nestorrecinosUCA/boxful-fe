@@ -19,8 +19,10 @@ export default function Home() {
   const [newOrder, setNewOrder] = useState(defaultOrder);
   
   const updateOrder = (orderProperty: Partial<OrderType>) => {
+    console.log({...orderProperty});
     const updatedOrder = {...newOrder, ...orderProperty};
     setNewOrder(updatedOrder);
+    console.log(updatedOrder);
   };
 
   useEffect(() => {
@@ -47,13 +49,16 @@ export default function Home() {
       <div className="main-elements">
 
         <CollectingAndDate
-          address={states} />
+          address={states}
+          onUpdate={updateOrder}
+        />
         <NamesInput onUpdate={updateOrder}/>
         <PhoneAndAddress />
         <AddressInformation
           states={states}
-          onUpdateCities={updateCities}
           cities={cities}
+          onUpdateCities={updateCities}
+          onUpdateOrder={updateOrder}
         />
         <IndicationsInput />
         <NextButton />
