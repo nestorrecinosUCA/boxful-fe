@@ -1,15 +1,16 @@
 import { OrderType } from "@/app/types";
 
 export const defaultOrder: OrderType = {
-  collectingAddress: "",
+  collectingAddress: '',
   date: new Date(),
-  names: "",
-  lastnames: "",
-  email: "",
-  userAddres: "",
-  state: "",
-  city: "",
-  reference: "",
-  indications: "",
+  names: '',
+  lastnames: '',
+  email: '',
+  userAddres: '',
+  state: '',
+  city: '',
+  reference: '',
+  indications: '',
+  phone: '',
   packages: []
 };
