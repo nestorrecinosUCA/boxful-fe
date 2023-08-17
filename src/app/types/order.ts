@@ -11,5 +11,6 @@ export type OrderType = {
   city: string;
   reference: string;
   indications: string;
+  phone: string;
   packages: PackageType[];
 };
