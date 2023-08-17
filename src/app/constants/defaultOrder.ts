@@ -1,7 +1,7 @@
 import { OrderType } from "@/app/types";
 
 export const defaultOrder: OrderType = {
-  collectingAddres: "",
+  collectingAddress: "",
   date: new Date(),
   names: "",
   lastnames: "",

@@ -5,7 +5,7 @@ import {  DatePicker, Space  } from 'antd';
 dayjs.extend(customParseFormat);
 const { RangePicker } = DatePicker;
 
-export default function DatePickerSelector() {
+export default function DatePickerSelector({onUpdateOrder}) {
   const range = (start, end) => {
     const result = [];
     for (let i = start; i < end; i++) {
@@ -30,13 +30,13 @@ export default function DatePickerSelector() {
       <Space direction="vertical" size={12}>
         <DatePicker
           className='datePicker'
-          format="YYYY-MM-DD HH:mm:ss"
+          format="YYYY/MM/DD"
           disabledDate={disabledDate}
-          disabledTime={disabledDateTime}
-          showTime={{
-            defaultValue: dayjs('00:00:00', 'HH:mm:ss'),
+          onChange={(date) =>{ 
+            const convertedDate = date?.format('YYYY/MM/DD').toString();
+            onUpdateOrder({date: convertedDate})
           }}
-          />
+        />
     </Space>
       {/* <input id={`date-picker`} type='date'/> */}
     </div>
