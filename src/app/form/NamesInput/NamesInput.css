@@ -1,0 +1,11 @@
+.namesInputContainer {
+  display: flex;
+}
+
+.namesInputContainer div input{
+  height: 60px;
+  width: 360px;
+  border-radius: 10px;
+  padding-left: 20px;
+  border: 1px solid #DEE1E7;
+}

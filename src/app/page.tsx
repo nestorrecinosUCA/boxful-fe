@@ -5,6 +5,8 @@ import CollectingAddressSelector from '@/app/form/CollectingAddressSelector';
 import StateSelector from '@/app/form/StateSelector';
 import CitySelector from '@/app/form/CitySelector';
 import { CityType, StateType } from '@/app/types';
+import DatePicker from '@/app/form/DatePicker';
+import NamesInput from '@/app/form/NamesInput';
 
 
 export default function Home() {
@@ -36,6 +38,8 @@ export default function Home() {
       <CollectingAddressSelector
         states={states}
       />
+      <DatePicker />
+      <NamesInput />
       <StateSelector
         states={states}
         onUpdateCities={updateCities}
