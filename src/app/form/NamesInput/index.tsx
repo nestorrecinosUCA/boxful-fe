@@ -2,7 +2,7 @@ import './NamesInput.css';
 
 export default function NamesInput() {
   return (
-    <div className={`namesInputContainer`}>
+    <div className={`namesInputContainer  defaultMargin`}>
       <div>
         <label htmlFor="names-input">Nombres</label>
         <input id={`names-input`} placeholder={`John`}></input>

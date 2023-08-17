@@ -31,3 +31,7 @@ body {
 .main-elements {
   width: 1120px;
 }
+
+.defaultMargin {
+  margin-top: 15px;
+}

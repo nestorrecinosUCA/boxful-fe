@@ -4,7 +4,7 @@ import { BsArrowRightShort } from 'react-icons/bs';
 
 export default function NextButton() {
   return (
-    <button className={`primaryButton`}>
+    <button className={`primaryButton defaultMargin`}>
       <p className={`buttonLabel`}>
         Siguiente
       </p>

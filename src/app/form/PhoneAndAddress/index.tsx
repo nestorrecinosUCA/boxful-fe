@@ -7,7 +7,7 @@ import PhoneIput from "@/app/form/PhoneInput";
 
 export default function PhoneAndAddress() {
   return (
-    <div className={`phoneAndAddressContainer`}>
+    <div className={`phoneAndAddressContainer  defaultMargin`}>
       <PhoneIput />
       <div className='locationIcon'>
         <MdLocationOn />

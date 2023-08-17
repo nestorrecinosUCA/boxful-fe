@@ -4,7 +4,7 @@ import StateSelector from "@/app/form/StateSelector";
 
 export default function AddressInformation({states, onUpdateCities, cities}) {
   return (
-    <div className={`addressInfoContainer`}>
+    <div className={`addressInfoContainer defaultMargin`}>
       <StateSelector
         states={states}
         onUpdateCities={onUpdateCities} />

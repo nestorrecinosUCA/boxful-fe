@@ -26,7 +26,7 @@ export default function DatePickerSelector() {
   });
   return (
     <div className={`datePickerContainer`}>
-      <label htmlFor="date-picker">Fecha programada</label>
+      <label htmlFor="date-picker">📅 Fecha programada</label>
       <Space direction="vertical" size={12}>
         <DatePicker
           className='datePicker'
