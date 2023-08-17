@@ -3,7 +3,7 @@ import './globals.css'
 import { useState, useEffect } from 'react';
 
 import { CityType, OrderType, StateType } from '@/app/types';
-import { defaultOrder } from '@/app/constants';
+import { apiUrl, defaultOrder } from '@/app/constants';
 
 import NamesInput from '@/app/form/NamesInput';
 import AddressInformation from '@/app/form/AddressInformation';
@@ -28,7 +28,7 @@ export default function Home() {
   useEffect(() => {
     async function fetchStates() {
       try {
-        const response = await fetch('http://localhost:3000/states/');
+        const response = await fetch(`${apiUrl}/states/`);
         const jsonResponse: StateType[] = await response.json();
         setStates(jsonResponse);
       } catch (error) {
