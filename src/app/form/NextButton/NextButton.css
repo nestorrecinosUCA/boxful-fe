@@ -1,0 +1,30 @@
+.primaryButton {
+  width: 240px;
+  height: 75px;
+  background-color: #4270F9;
+  border: 1px #2F5CDF;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  position: absolute;
+  left: 80%;
+}
+
+.primaryButton:hover {
+  background-color: #2F5CDF;
+  cursor: default;
+}
+
+.buttonLabel {
+  font-size: 18px;
+  width: 200px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.arrowIcon {
+  width: 30px;
+  height: 30px;
+}

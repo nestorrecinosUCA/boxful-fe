@@ -12,6 +12,7 @@ import AddressInformation from '@/app/form/AddressInformation';
 import IndicationsInput from '@/app/form/IndicationsInput';
 import PhoneAndAddress from '@/app/form/PhoneAndAddress';
 import CollectingAndDate from '@/app/form/CollectingAndAddress';
+import NextButton from '@/app/form/NextButton';
 
 
 export default function Home() {
@@ -53,6 +54,7 @@ export default function Home() {
           cities={cities}
         />
         <IndicationsInput />
+        <NextButton />
       </div>
     </main>
   )
