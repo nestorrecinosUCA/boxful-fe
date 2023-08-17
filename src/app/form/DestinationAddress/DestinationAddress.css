@@ -1,0 +1,11 @@
+.destinationContainer {
+  width: 700px;
+}
+
+.destinationContainer input {
+  width: 700px;
+  height: 60px;
+  border-radius: 10px;
+  padding-left: 20px;
+  border: 1px solid #DEE1E7;
+}

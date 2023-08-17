@@ -1,0 +1,11 @@
+.phoneAndAddressContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.locationIcon *{
+  width: 20px;
+  height: 25px;
+  color: #ACB3C5;
+}

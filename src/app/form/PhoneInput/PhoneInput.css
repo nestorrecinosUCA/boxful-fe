@@ -1,0 +1,12 @@
+.phoneContainer {
+  width: 360px;
+}
+
+.phoneInputContainer {
+  width: 360px;
+  height: 60px;
+}
+
+.ant-select-selector {
+  height: 60px!important;
+}
