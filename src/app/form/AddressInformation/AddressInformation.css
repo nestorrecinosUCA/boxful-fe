@@ -12,7 +12,7 @@
 }
 
 .addressInfoContainer div {
-  flex: 1;
+  width: 360px;
 }
 
 .addressInfoContainer div select {

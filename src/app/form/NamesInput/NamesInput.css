@@ -1,5 +1,10 @@
 .namesInputContainer {
   display: flex;
+  justify-content: space-between;
+}
+
+.namesInputContainer div {
+  width: 360px;
 }
 
 .namesInputContainer div input{

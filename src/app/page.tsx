@@ -1,4 +1,5 @@
 "use client";
+import './globals.css'
 import { useState, useEffect } from 'react';
 
 import CollectingAddressSelector from '@/app/form/CollectingAddressSelector';
@@ -8,6 +9,8 @@ import { CityType, StateType } from '@/app/types';
 import DatePicker from '@/app/form/DatePicker';
 import NamesInput from '@/app/form/NamesInput';
 import AddressInformation from '@/app/form/AddressInformation';
+import IndicationsInput from '@/app/form/IndicationsInput';
+import PhoneAndAddress from '@/app/form/PhoneAndAddress';
 
 
 export default function Home() {
@@ -37,21 +40,26 @@ export default function Home() {
   }
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <CollectingAddressSelector
-        states={states}
-      />
-      <DatePicker />
-      <NamesInput />
-      {/* <StateSelector
-        states={states}
-        onUpdateCities={updateCities}
-      />
-      <CitySelector cities={cities} /> */}
-      <AddressInformation
-        states={states}
-        onUpdateCities={updateCities}
-        cities={cities}
-      />
+      <div className="main-elements">
+
+        <CollectingAddressSelector
+          states={states}
+        />
+        <DatePicker />
+        <PhoneAndAddress />
+        <NamesInput />
+        {/* <StateSelector
+          states={states}
+          onUpdateCities={updateCities}
+        />
+        <CitySelector cities={cities} /> */}
+        <AddressInformation
+          states={states}
+          onUpdateCities={updateCities}
+          cities={cities}
+        />
+        <IndicationsInput />
+      </div>
     </main>
   )
 }
