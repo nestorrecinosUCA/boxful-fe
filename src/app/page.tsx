@@ -7,6 +7,7 @@ import CitySelector from '@/app/form/CitySelector';
 import { CityType, StateType } from '@/app/types';
 import DatePicker from '@/app/form/DatePicker';
 import NamesInput from '@/app/form/NamesInput';
+import AddressInformation from '@/app/form/AddressInformation';
 
 
 export default function Home() {
@@ -17,7 +18,8 @@ export default function Home() {
     async function fetchStates() {
       try {
         const response = await fetch('http://localhost:3000/states/');
-        const jsonResponse = await response.json();
+        const jsonResponse: StateType[] = await response.json();
+        console.log('JSON', jsonResponse[0])
         setStates(jsonResponse);
       } catch (error) {
         console.error('Error fetching data:', error)
@@ -40,11 +42,16 @@ export default function Home() {
       />
       <DatePicker />
       <NamesInput />
-      <StateSelector
+      {/* <StateSelector
         states={states}
         onUpdateCities={updateCities}
       />
-      <CitySelector cities={cities} />
+      <CitySelector cities={cities} /> */}
+      <AddressInformation
+        states={states}
+        onUpdateCities={updateCities}
+        cities={cities}
+      />
     </main>
   )
 }
