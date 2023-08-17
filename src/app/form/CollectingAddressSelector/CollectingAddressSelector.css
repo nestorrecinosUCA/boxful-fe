@@ -1,0 +1,12 @@
+.collectingAddressContainer {
+  width: 740px;
+}
+
+.collectingAddressContainer select {
+  width: 740px;
+  height: 60px;
+  background-color: white;
+  border-radius: 10px;
+  padding-left: 20px;
+  border: 1px solid #DEE1E7;
+}

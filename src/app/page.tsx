@@ -11,6 +11,7 @@ import NamesInput from '@/app/form/NamesInput';
 import AddressInformation from '@/app/form/AddressInformation';
 import IndicationsInput from '@/app/form/IndicationsInput';
 import PhoneAndAddress from '@/app/form/PhoneAndAddress';
+import CollectingAndDate from '@/app/form/CollectingAndAddress';
 
 
 export default function Home() {
@@ -42,10 +43,8 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="main-elements">
 
-        <CollectingAddressSelector
-          states={states}
-        />
-        <DatePicker />
+        <CollectingAndDate
+          address={states} />
         <NamesInput />
         <PhoneAndAddress />
         <AddressInformation
