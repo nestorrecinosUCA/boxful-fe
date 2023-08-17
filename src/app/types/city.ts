@@ -1,3 +1,3 @@
-export type City = {
+export type CityType = {
   name: string;
 };

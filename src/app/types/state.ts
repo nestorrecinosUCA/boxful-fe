@@ -1,9 +1,9 @@
-import { City } from "@/app/types/city";
-import { CollectingAddres } from "@/app/types/collecting-address";
+import { CityType } from "@/app/types/city";
+import { CollectingAddressType } from "@/app/types/collecting-address";
 
-export type State = {
+export type StateType = {
   id: string;
   name: string;
-  cities: City[];
-  collectionAddresses: CollectingAddres;
+  cities: CityType[];
+  collectionAddresses: CollectingAddressType;
 };

@@ -1,16 +1,15 @@
 "use client";
-import Image from 'next/image'
-import StateSelector from '@/app/form/state'
-import CitySelector from '@/app/form/city';
 import { useState, useEffect } from 'react';
-import { State } from '@/app/types';
-import { City } from '@/app/types/city';
-import CollectingAddressSelector from '@/app/form/collecting-address';
+
+import CollectingAddressSelector from '@/app/form/CollectingAddressSelector';
+import StateSelector from '@/app/form/StateSelector';
+import CitySelector from '@/app/form/CitySelector';
+import { CityType, StateType } from '@/app/types';
 
 
 export default function Home() {
-  const [states, setStates] = useState([] as State[]);
-  const [cities, setCities] = useState([] as City[]);
+  const [states, setStates] = useState([] as StateType[]);
+  const [cities, setCities] = useState([] as CityType[]);
   
   useEffect(() => {
     async function fetchStates() {
@@ -29,7 +28,7 @@ export default function Home() {
   const updateCities = (state: string) => {
     console.log('STATES', states);
     const selectedState = states.find(iterator => iterator.name === state);
-    const cities = selectedState?.cities as City[];
+    const cities = selectedState?.cities as CityType[];
     setCities(cities);
   }
   return (
