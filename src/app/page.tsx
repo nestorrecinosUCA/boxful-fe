@@ -2,11 +2,9 @@
 import './globals.css'
 import { useState, useEffect } from 'react';
 
-import CollectingAddressSelector from '@/app/form/CollectingAddressSelector';
-import StateSelector from '@/app/form/StateSelector';
-import CitySelector from '@/app/form/CitySelector';
-import { CityType, StateType } from '@/app/types';
-import DatePicker from '@/app/form/DatePicker';
+import { CityType, OrderType, StateType } from '@/app/types';
+import { defaultOrder } from '@/app/constants';
+
 import NamesInput from '@/app/form/NamesInput';
 import AddressInformation from '@/app/form/AddressInformation';
 import IndicationsInput from '@/app/form/IndicationsInput';
@@ -18,13 +16,18 @@ import NextButton from '@/app/form/NextButton';
 export default function Home() {
   const [states, setStates] = useState([] as StateType[]);
   const [cities, setCities] = useState([] as CityType[]);
+  const [newOrder, setNewOrder] = useState(defaultOrder);
   
+  const updateOrder = (orderProperty: Partial<OrderType>) => {
+    const updatedOrder = {...newOrder, ...orderProperty};
+    setNewOrder(updatedOrder);
+  };
+
   useEffect(() => {
     async function fetchStates() {
       try {
         const response = await fetch('http://localhost:3000/states/');
         const jsonResponse: StateType[] = await response.json();
-        console.log('JSON', jsonResponse[0])
         setStates(jsonResponse);
       } catch (error) {
         console.error('Error fetching data:', error)
@@ -35,9 +38,8 @@ export default function Home() {
   }, [])
   
   const updateCities = (state: string) => {
-    console.log('STATES', states);
     const selectedState = states.find(iterator => iterator.name === state);
-    const cities = selectedState?.cities as CityType[];
+    const cities = selectedState?.cities ? selectedState?.cities : [];
     setCities(cities);
   }
   return (
@@ -46,7 +48,7 @@ export default function Home() {
 
         <CollectingAndDate
           address={states} />
-        <NamesInput />
+        <NamesInput onUpdate={updateOrder}/>
         <PhoneAndAddress />
         <AddressInformation
           states={states}
