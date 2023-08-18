@@ -1,3 +1,4 @@
+import { getValue } from '@/app/utils';
 import './CollectingAddressSelector.css';
 import { CollectingAddressType, StateType } from "@/app/types";
 
@@ -11,9 +12,8 @@ export default function CollectingAddressSelector({states, onUpdateOrder}) {
         id={`collecting-point`}
         defaultValue='Default'
         onChange={(event) => {
-          onUpdateOrder({
-            collectingAddress: event.target.value
-          })
+          const collectingAddress = getValue(event);
+          onUpdateOrder({ collectingAddress });
         }}
       >
         <option value={'Default'}>Seleccionar punto de recolección</option>

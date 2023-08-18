@@ -1,4 +1,5 @@
 import { StateType } from '@/app/types'
+import { getValue } from '@/app/utils';
 
 export default function StateSelector({ states, onUpdateCities, onUpdateOrder }) {
   return (
@@ -8,7 +9,7 @@ export default function StateSelector({ states, onUpdateCities, onUpdateOrder })
         id={`state-selector`}
         defaultValue={'Default'}
         onChange={(event) => {
-          const state = event.target.value;
+          const state = getValue(event);
           onUpdateCities(state)
           onUpdateOrder({ state })
         }}

@@ -1,4 +1,5 @@
 import { CityType } from "@/app/types/city";
+import { getValue } from "@/app/utils";
 
 export default function CitySelector({ cities, onUpdateOrder }) {
   return (
@@ -8,7 +9,8 @@ export default function CitySelector({ cities, onUpdateOrder }) {
         id={`city-selector`}
         defaultValue={'Default'}
         onChange={(event) => {
-          onUpdateOrder({ city: event.target.value })
+          const city = getValue(event);
+          onUpdateOrder({ city })
         }}
       >
         <option disabled key={'Default'} value='Default'>Seleccionar Municipio</option>

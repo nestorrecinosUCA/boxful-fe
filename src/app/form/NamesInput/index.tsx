@@ -1,3 +1,4 @@
+import { getValue } from '@/app/utils';
 import './NamesInput.css';
 
 export default function NamesInput({onUpdate}) {
@@ -7,7 +8,8 @@ export default function NamesInput({onUpdate}) {
         <label htmlFor="names-input">Nombres</label>
         <input
           onChange={(event) => {
-            onUpdate({names: event.target.value})
+            const names = getValue(event);
+            onUpdate({ names })
           }}
           id={`names-input`}
           placeholder={`John`}
@@ -17,7 +19,8 @@ export default function NamesInput({onUpdate}) {
         <label htmlFor="lastnames-input">Apellidos</label>
         <input
           onChange={(event) => {
-            onUpdate({lastnames: event.target.value})
+            const lastnames = getValue(event);
+            onUpdate({ lastnames })
           }}
           id={`lastnames-input`}
           placeholder={`Doe`}
@@ -27,7 +30,8 @@ export default function NamesInput({onUpdate}) {
         <label htmlFor="email-input">Correo Electrónico</label>
         <input
           onChange={(event) => {
-            onUpdate({email: event.target.value})
+            const email = getValue(event);
+            onUpdate({ email })
           }}
           id={`email-input`}
           placeholder={`john@email.com`}
