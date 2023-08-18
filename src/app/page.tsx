@@ -52,15 +52,20 @@ export default function Home() {
           address={states}
           onUpdate={updateOrder}
         />
-        <NamesInput onUpdate={updateOrder}/>
-        <PhoneAndAddress />
+        <NamesInput onUpdate={updateOrder}
+        />
+        <PhoneAndAddress
+          onUpdate={updateOrder} 
+        />
         <AddressInformation
           states={states}
           cities={cities}
           onUpdateCities={updateCities}
           onUpdateOrder={updateOrder}
         />
-        <IndicationsInput />
+        <IndicationsInput
+          onUpdateOrder={updateOrder}
+        />
         <NextButton />
       </div>
     </main>
