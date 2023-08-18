@@ -6,7 +6,7 @@ export type OrderType = {
   names: string;
   lastnames: string;
   email: string;
-  userAddres: string;
+  userAddress: string;
   state: string;
   city: string;
   reference: string;
