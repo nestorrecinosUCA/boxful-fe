@@ -28,7 +28,7 @@ export default function Home() {
   useEffect(() => {
     async function fetchStates() {
       try {
-        const response = await fetch(`${apiUrl}/states/`);
+        const response = await fetch(`http://localhost:3000/states/`);
         const jsonResponse: StateType[] = await response.json();
         setStates(jsonResponse);
       } catch (error) {
