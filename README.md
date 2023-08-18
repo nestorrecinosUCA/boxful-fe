@@ -1,4 +1,4 @@
-# Technical Assessment Backend - Boxful
+# Technical Assessment Frontend - Boxful
 
 ## Description
 This app contains a form that must be filled with information about user to deliver packages, it also contains a view to add the packages to be delivered. **(This second par was not completed)**
